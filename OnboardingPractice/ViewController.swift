@@ -7,8 +7,21 @@
 //
 
 import UIKit
+import PaperOnboarding
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PaperOnboardingDataSource {
+    
+    
+    
+    
+    func onboardingItemsCount() -> Int {
+        <#code#>
+    }
+    
+    func onboardingItem(at index: Int) -> OnboardingItemInfo {
+        <#code#>
+    }
+    
 
     
     @IBOutlet weak var onboardingView: UIView!
