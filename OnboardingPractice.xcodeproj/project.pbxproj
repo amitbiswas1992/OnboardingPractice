@@ -12,7 +12,24 @@
 		84CEE9ED204A08B20065C3F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CEE9EB204A08B20065C3F4 /* Main.storyboard */; };
 		84CEE9EF204A08B20065C3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CEE9EE204A08B20065C3F4 /* Assets.xcassets */; };
 		84CEE9F2204A08B20065C3F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CEE9F0204A08B20065C3F4 /* LaunchScreen.storyboard */; };
+		84CEE9FA204A09850065C3F4 /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CEE9F9204A09850065C3F4 /* PaperOnboarding.framework */; };
+		84CEE9FB204A09850065C3F4 /* PaperOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CEE9F9204A09850065C3F4 /* PaperOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84CEE9FE204A0BE20065C3F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEE9FD204A0BE20065C3F4 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84CEE9FC204A09850065C3F4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84CEE9FB204A09850065C3F4 /* PaperOnboarding.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84CEE9E4204A08B20065C3F4 /* OnboardingPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardingPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +39,8 @@
 		84CEE9EE204A08B20065C3F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CEE9F1204A08B20065C3F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CEE9F3204A08B20065C3F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CEE9F9204A09850065C3F4 /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/Build/iOS/PaperOnboarding.framework; sourceTree = "<group>"; };
+		84CEE9FD204A0BE20065C3F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CEE9FA204A09850065C3F4 /* PaperOnboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +58,7 @@
 		84CEE9DB204A08B20065C3F4 = {
 			isa = PBXGroup;
 			children = (
+				84CEE9F9204A09850065C3F4 /* PaperOnboarding.framework */,
 				84CEE9E6204A08B20065C3F4 /* OnboardingPractice */,
 				84CEE9E5204A08B20065C3F4 /* Products */,
 			);
@@ -56,6 +77,7 @@
 			children = (
 				84CEE9E7204A08B20065C3F4 /* AppDelegate.swift */,
 				84CEE9E9204A08B20065C3F4 /* ViewController.swift */,
+				84CEE9FD204A0BE20065C3F4 /* OnboardingView.swift */,
 				84CEE9EB204A08B20065C3F4 /* Main.storyboard */,
 				84CEE9EE204A08B20065C3F4 /* Assets.xcassets */,
 				84CEE9F0204A08B20065C3F4 /* LaunchScreen.storyboard */,
@@ -74,6 +96,7 @@
 				84CEE9E0204A08B20065C3F4 /* Sources */,
 				84CEE9E1204A08B20065C3F4 /* Frameworks */,
 				84CEE9E2204A08B20065C3F4 /* Resources */,
+				84CEE9FC204A09850065C3F4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CEE9FE204A0BE20065C3F4 /* OnboardingView.swift in Sources */,
 				84CEE9EA204A08B20065C3F4 /* ViewController.swift in Sources */,
 				84CEE9E8204A08B20065C3F4 /* AppDelegate.swift in Sources */,
 			);
@@ -276,6 +300,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7PY4FGBSY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OnboardingPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amitbiswas.OnboardingPractice;
@@ -291,6 +319,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7PY4FGBSY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OnboardingPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amitbiswas.OnboardingPractice;
